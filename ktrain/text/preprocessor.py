@@ -123,7 +123,7 @@ def get_bert_path(lang='en'):
         bert_url = BERT_URL_MULTI
     ktrain_data = U.get_ktrain_data()
     zip_fpath = os.path.join(ktrain_data, fname_from_url(bert_url))
-    bert_path = os.path.join( ktrain_data, os.path.splitext(fname_from_url(bert_url))[0] )
+    bert_path = os.path.join( ktrain_data )
     if not os.path.isdir(bert_path) or \
        not os.path.isfile(os.path.join(bert_path, 'bert_config.json')) or\
        not os.path.isfile(os.path.join(bert_path, 'bert_model.ckpt.data-00000-of-00001')) or\
